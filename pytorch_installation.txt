@@ -1,0 +1,62 @@
+# Pytorch installation
+
+1. Install pip3:
+
+    Mac:
+    
+        brew install python3
+        
+    If you don't have homebrew installed you can use [this link](https://www.howtogeek.com/211541/homebrew-for-os-x-easily-installs-desktop-apps-and-terminal-utilities/) to install it.
+        
+    Linux: 
+    
+        sudo apt-get install python3-pip 
+  
+    * Make sure to install pillow 5.0.0 using the following command. The pillow 5.0.1 is broken for Mac OSx.
+
+        pip3 install pillow==5.0.0
+
+
+2. Visit [pytorch website](https://pytorch.org/) and select your OS (preferably Mac or Linux). Choose pip as package manager, 3.5 as python version and None for Cuda.
+
+3. I'm using mac so my command would be:
+
+        pip3 install torch torchvision 
+
+    If you are using Linux it should probably look something like this:
+
+        pip3 install http://download.pytorch.org/whl/cpu/torch-0.4.0-cp35-cp35m-linux_x86_64.whl 
+        pip3 install torchvision
+
+4. To make sure your installation was successful try the following commands:
+
+    ```bash
+    python3
+    >>> import torch
+    >>> import torchvision
+    >>> import torchvision.transforms as transforms
+    >>> print(torch.__version__)
+    ```
+    
+    The last command shows you the pytorch version you just installed. Make sure it's '0.4.0' or later. 
+    
+# Notes for those who have never used Python
+
+1. Install python! [Here](http://www.pyladies.com/blog/Get-Your-Mac-Ready-for-Python-Programming/) for Mac users and [here](http://ubuntuhandbook.org/index.php/2017/07/install-python-3-6-1-in-ubuntu-16-04-lts/) for Linux users.
+
+2. Use debugger to get a better sense of what's going on (or ipython). To use the debugger:
+        
+        import pdb
+
+    And then use this line wherever you'd like to have a pause:
+    
+        pdb.set_trace()
+        
+    It's a very useful command. According to their documentation:
+    
+    ``The module pdb defines an interactive source code debugger for Python programs. It supports setting (conditional) breakpoints and single stepping at the source line level, inspection of stack frames, source code listing, and evaluation of arbitrary Python code in the context of any stack frame. It also supports post-mortem debugging and can be called under program control.``
+    
+3. Whenever you are not sure what attributes an object has or which functions you can invoke on a specific object, print:
+
+        dir(<object name>)
+            
