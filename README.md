@@ -40,7 +40,7 @@ Fill in the code for LazyNet in `models.py`. Run the model for 50 epochs and rep
 python main.py --model LazyNet --epochs 50
 ```
 
-Note that the default loss is cross-entropy loss, so use a softmax activation for the layer. Analyze the behavior of your model (how well does it work?, how fast does it train?, why do you think it's working/not working?) and report the plots in your report file.
+Note that the default loss is cross-entropy loss and in pytorch, it includes a softmax activation in its definition, so no need to use additional activation in your model. Analyze the behavior of your model (how well does it work?, how fast does it train?, why do you think it's working/not working?) and report the plots in your report file.
 
 ## 2.2. Training a classifier using multiple fully connected layers ##
 
